@@ -1,0 +1,137 @@
+<!-- ==== Documentation ========================================================
+    ==>todo==> : tout les commentaires précédés de cette mention signifient que
+                 cet aspect conporte encore des zone de flou et qu'il faudra
+                 éventuellement apporter des modification avant la mise en
+                 production.
+    ::info::   : tout les commentaires précédés de cette mention sont simplement
+                 des informations diverse sur le contenu de ce qui va suivre.
+ -->
+
+<!doctype html>
+
+<!-- ==>todo==> penser à rendre le paramêtre de lang dynamique comme le site
+              prévoi aux moins deux langues possibles minimum (EN, FR)       -->
+<html lang="fr">
+    <!-- ::info:: déclaration des information d'entête de la page web -->
+    <head>
+        <!-- ::info:: choix de l'encodage des caractères -->
+        <meta charset="utf-8"/>
+        <!-- ::info:: choix du titre de la page web -->
+        <!-- ==> todo ==> envisager de changer le nom du site web -->
+        <title>Tv show</title>
+        <!-- :: info :: déclaration des feuilles de style css associées -->
+        <link rel="stylesheet" href="../stylesheets/wireframe.css"/>
+        <link rel="stylesheet" href="../stylesheets/header.css"/>
+    </head>
+
+    <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
+                    -->
+    <body>
+        <!-- ::info:: balise qui regroupe la section d'entête de la page -->
+        <header>
+            <!-- ::info:: balise du logo du site -->
+            <img class="wf_img" src="../pictures/wf_img.jpg" alt="logo" id="hd_logo"/>
+
+            <!-- ::info:: balise de type <section> qui regroupe touts les
+                          éléments principaux du header: slogan, menu, langues
+                          et barre de recherche -->
+            <section>
+                <!-- ::info:: balise block qui regroupe le slogan et le choix
+                              des langues du site -->
+                <div id="hd_block_slogan_lang">
+                    <!-- ::info:: balise block du slogan du site -->
+                    <div class="wf_no-link" id="hd_block_slogan">Slogan</div>
+                    <!-- ::info:: balise block qui regroupe le choix des
+                                  différentes langues du site web -->
+                    <div id="hd_block_lang">
+                        <!-- ::info:: chaque balise <figure> représente le choix
+                                      d'une langue avec un dreapau et une
+                                      légende (EN, FR, ...) -->
+                        <figure>
+                            <!-- ::info:: drapeau -->
+                            <img class="wf_img" src="../pictures/wf_img.jpg" alt="drapeau"/>
+                            <!-- ::info:: légend -->
+                            <figcaption class="wf_no-link">Lang1</figcaption>
+                        </figure>
+                        <figure>
+                            <!-- ::info:: drapeau -->
+                            <img class="wf_img" src="../pictures/wf_img.jpg" alt="drapeau"/>
+                            <!-- ::info:: légend -->
+                            <figcaption class="wf_no-link">Lang2</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
+                <!-- ::info:: balise block qui regroupe le menu et la barre de
+                              recherche -->
+                <div id="hd_block_nav_search">
+                    <!-- ::info:: balise qui regroupe les élément de navigation
+                                    interne du site web (le menu horizontal) -->
+                    <nav>
+                        <a class="wf_link" href="#">Accueil</a>
+                        <a class="wf_link" href="#">Top 10</a>
+                        <a class="wf_link" href="#">Séries</a>
+                        <a class="wf_link" href="#">Acteurs</a>
+                        <a class="wf_link" href="#">Calendrier diffusion</a>
+                    </nav>
+
+                    <!-- ::info:: balise de type block qui contient tout les
+                                  éléments qui constitues la barre de recherche
+                                  -->
+                    <div id="hd_block_search">
+                        <!-- ::info:: formulaire de la barre de recherche : type
+                                      input text -->
+                        <!-- ==>todo==> remplacer ce block div par le formulaire
+                                        -->
+                        <div class="wf_no-link" id="hd_block_search_input">recherche</div>
+                        <!-- ::info:: icone de recherche -->
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="recherche"/>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ::info:: balise de type <aside> qui regroupe les éléments liés
+                          à l'utilisateur : connection, état, statut, ... -->
+            <aside>
+                <!-- ::info:: le block <div> de gestion du compte de
+                              l'utilisateur -->
+                <div id="hd_block_user">
+                    <!-- ::info:: balise <section> qui regroupes des information
+                                  sur l'utilisateur connecté -->
+                    <section>
+                        <!-- ::info:: pseudo de l'utilisateur -->
+                        <a class="wf_link" href="#">Pseudo</a>
+                        <!-- ::info:: block qui regroupes des information sur
+                                      l'utilisateur -->
+                        <!-- ==>todo==> à modifier et à compléter : trop vague
+                                        -->
+                        <a class="wf_link" id="hd_block_user_info" href="#">Gestion compte</a>
+                    </section>
+                    <!-- ::info:: avatar de l'utilisateur -->
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+                </div>
+                <!-- ::info:: le block <div> de connection aux réseaux sociaux
+                              -->
+                <div id="hd_block_social">
+                    <!-- ::info:: chaque balise <figure> représente le choix
+                                  d'un réseau social -->
+                    <figure>
+                        <!-- ::info:: icone du réseau social -->
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="réseaux sociaux"/>
+                        <!-- ::info:: nom du réseau social associé -->
+                        <figcaption class="wf_no-link">Réseau social 1</figcaption>
+                    </figure>
+                    <figure>
+                        <!-- ::info:: icone du réseau social -->
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="réseaux sociaux"/>
+                        <!-- ::info:: nom du réseau social associé -->
+                        <figcaption class="wf_no-link">Réseau social 1</figcaption>
+                    </figure>
+                </div>
+            </aside>
+
+        </header>
+    </body>
+
+</html>

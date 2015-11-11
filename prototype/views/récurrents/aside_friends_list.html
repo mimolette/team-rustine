@@ -1,0 +1,86 @@
+<!-- ==== Documentation ========================================================
+    ==>todo==> : tout les commentaires précédés de cette mention signifient que
+                 cet aspect conporte encore des zone de flou et qu'il faudra
+                 éventuellement apporter des modification avant la mise en
+                 production.
+    ::info::   : tout les commentaires précédés de cette mention sont simplement
+                 des informations diverse sur le contenu de ce qui va suivre.
+ -->
+
+<!doctype html>
+
+<!-- ==>todo==> penser à rendre le paramêtre de lang dynamique comme le site
+              prévoi aux moins deux langues possibles minimum (EN, FR)       -->
+<html lang="fr">
+    <!-- ::info:: déclaration des information d'entête de la page web -->
+    <head>
+        <!-- ::info:: choix de l'encodage des caractères -->
+        <meta charset="utf-8"/>
+        <!-- ::info:: choix du titre de la page web -->
+        <!-- ==> todo ==> envisager de changer le nom du site web -->
+        <title>Tv show</title>
+        <!-- :: info :: déclaration des feuilles de style css associées -->
+        <link rel="stylesheet" href="../stylesheets/wireframe.css"/>
+        <link rel="stylesheet" href="../stylesheets/aside_friends_list.css"/>
+    </head>
+
+    <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
+                    -->
+    <body>
+        <!-- ::info:: le block de la liste des amis de l'utilisateur -->
+        <div class="wf_no-link-content" id="as_friends_list">
+            <!-- ::info:: le titre de ce block -->
+            <h3 class="wf_no-link" >Liste des amis</h3>
+            <!-- ::info:: la liste des amis -->
+            <ul>
+                <!-- ::info:: chacuns des amis est composé d'un avatar, d'un
+                              pseudo (qui pointe vers son mur)et d'un statut -->
+                <li>
+                    <!-- ::info:: l'avatar des amis -->
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+                    <!-- ::info:: block qui regroupe pseudo et statut des amis
+                                  -->
+                    <div class="as_friends_list_info_user">
+                        <!-- ::info:: pseudo des amis -->
+                        <a class="wf_link" href="#">Pseudo</a>
+                        <!-- ::info:: statut des amis -->
+                        <div class="wf_no-link">statut</div>
+                    </div>
+                </li>
+                <li>
+                    <!-- ::info:: l'avatar des amis -->
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+                    <!-- ::info:: block qui regroupe pseudo et statut des amis
+                                  -->
+                    <div class="as_friends_list_info_user">
+                        <!-- ::info:: pseudo des amis -->
+                        <a class="wf_link" href="#">Pseudo</a>
+                        <!-- ::info:: statut des amis -->
+                        <div class="wf_no-link">statut</div>
+                    </div>
+                </li>
+                <li>
+                    <!-- ::info:: l'avatar des amis -->
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+                    <!-- ::info:: block qui regroupe pseudo et statut des amis
+                                  -->
+                    <div class="as_friends_list_info_user">
+                        <!-- ::info:: pseudo des amis -->
+                        <a class="wf_link" href="#">Pseudo</a>
+                        <!-- ::info:: statut des amis -->
+                        <div class="wf_no-link">statut</div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- ::info:: cette balise <div> représente un bouton qui permet
+                          d'agrandir la liste des amis -->
+            <!-- ==>todo==> revoir ce bouton pour être sûr de son
+                            fonctionnnement et de son utilité -->
+            <div class="wf_link" id="as_friends_list_button">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="flèche"/>
+            </div>
+        </div>
+    </body>
+
+</html>
