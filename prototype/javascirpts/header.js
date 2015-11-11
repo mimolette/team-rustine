@@ -76,7 +76,7 @@ tag_header.appendChild(tag_section);
             var list_link = [
                 {
                     name : "Accueil",
-                    link : "#"
+                    link : "accueil.html"
                 },
                 {
                     name : "Top 10",
