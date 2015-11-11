@@ -51,7 +51,7 @@ h2 {
             flex-direction: row;
             justify-content: flex-start;
             /* ::info:: marges externes */
-            margin-right: 10px;
+            margin-right: 20px;
             /* ::info:: positionnement */
             position: relative;
             /* ::info:: marges internes */
@@ -123,7 +123,6 @@ h2 {
     .top_comment_block {
         /* ::info:: positionnement des éléments contenu dans cette balise */
         flex-grow: 1;
-        border: 1px solid black;
         display: flex;
         justify-content: flex-start;
         /* ::info:: marges externes */
@@ -202,14 +201,53 @@ h2 {
             }
 
                 /* ::info:: la date du message */
-                .top_comment_message header div {
-                    flex-grow: 2;
+                .top_comment_date {
+                    flex: 1;
                     /* ::info:: dimensions */
                     min-height: 30px;
+                    /* ::info:: marges externes */
+                    margin-right: 10px;
                 }
+
+                /* ::info:: l'évaluation du message */
+                .top_comment_like {
+                    /* ::info:: positionnement des éléments contenu dans cette balise */
+                    display: flex;
+                    flex-direction: row;
+                    flex: 1;
+                    justify-content: flex-end;
+                }
+
+                    /* ::info:: les ensembles image + legend associé */
+                    .top_comment_like div {
+                        /* ::info:: positionnement des éléments contenu 
+                        dans cette balise */
+                        display: flex;
+                        flex-direction: row;
+                        flex: 1;
+                    }
+
+                    /* ::info:: les images de like et dislike */
+                    .top_comment_like img {
+                        /* ::info:: dimensions */
+                        width: 30px;
+                        height: 30px;
+                        /* ::info:: marges externes */
+                        margin-left: 4px;
+                    }
+
+                    /* ::info:: legend associé */
+                    .top_comment_like span {
+                        /* ::info:: capacité de l'élément à grandir dans 
+                        l'espace disponible */
+                        flex-grow: 1;
+                    }
+
 
             /* ::info:: le corps du message */
             .top_comment_message .top_comment_corps{
                 /* ::info:: positionnement des éléments contenu dans cette balise */
                 flex-grow: 1;
             }
+
+        
