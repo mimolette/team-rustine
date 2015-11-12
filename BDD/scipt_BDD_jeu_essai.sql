@@ -15,7 +15,7 @@ USE fil_rouge;
 CREATE TABLE IF NOT EXISTS serie(
         serie_id   int (11) Auto_increment  NOT NULL ,
         poster     Varchar (50) NOT NULL ,
-        validation Bool NOT NULL ,
+        validation int (1) NOT NULL ,
         user_id    Int ,
         PRIMARY KEY (serie_id )
 )ENGINE=InnoDB;
@@ -23,14 +23,14 @@ CREATE TABLE IF NOT EXISTS serie(
 # DATA : serie ----------------------------------------------
 INSERT INTO serie(serie_id, poster, validation, user_id)
 VALUES 
-        (1, "serie_id_1.jpg", TRUE, 1),
-        (2, "serie_id_2.jpg", TRUE, 1),
-        (3, "serie_id_3.jpg", TRUE, 1),
-        (4, "serie_id_4.jpg", TRUE, 1),
-        (5, "serie_id_5.jpg", TRUE, 1),
-        (6, "serie_id_6.jpg", TRUE, 2),
-        (7, "serie_id_7.jpg", FALSE, 3),
-        (8, "serie_id_8.jpg", TRUE, 1);
+        (1, "serie_id_1.jpg", 1, 1),
+        (2, "serie_id_2.jpg", 1, 1),
+        (3, "serie_id_3.jpg", 1, 1),
+        (4, "serie_id_4.jpg", 1, 1),
+        (5, "serie_id_5.jpg", 1, 1),
+        (6, "serie_id_6.jpg", 1, 2),
+        (7, "serie_id_7.jpg", 0, 3),
+        (8, "serie_id_8.jpg", 1, 1);
 
 #------------------------------------------------------------
 # Table: season
@@ -136,35 +136,85 @@ INSERT INTO translation_serie(translation_serie_id, synopsis,
 VALUES
         (1, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie vulputate diam. Etiam tellus eros, mollis in dictum at, ullamcorper.", 
         "Accapolcos", 1, 1),
-        (2, "", 
+        (2, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamcoprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Accapolcos", 1, 2),
-        (3, "", 
+        (3, "Lorem ipsum dolor srunt mollit anim id est laborum. ", 
         "Robert like les frittes", 2, 1),
-        (4, "", 
+        (4, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labo reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Robert aimes les patates", 2, 2),
-        (5, "", 
+        (5, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Venger", 3, 1),
-        (6, "",
+        (6, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris rit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ",
         "Vangeance", 3, 2),
-        (7, "", 
+        (7, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrudaute irure dolor in reprehenderit in luptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Roule ta bosse", 4, 1),
-        (8, "", 
+        (8, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariaturepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Roule ta bosse", 4, 2),
-        (9, "", 
+        (9, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint est laborum. ", 
         "Ever never", 5, 1),
-        (10, "", 
+        (10, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et doloerunt mollit anim id est laborum. ", 
         "Oui ou non ou pas", 5, 2),
-        (11, "", 
+        (11, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Love birds", 6, 1),
-        (12, "", 
+        (12, "Lorem ipsum dolor siagna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Psycophate", 6, 2),
-        (13, "", 
+        (13, "Lorem ipsum dolor sit amagna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Affraid", 7, 1),
-        (14, "", 
+        (14, "Lorem ipsum dolor sit is nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Peur", 7, 2),
-        (15, "", 
+        (15, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et doloExcepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Growing", 8, 1),
-        (16, "", 
+        (16, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco lasint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ", 
         "Fume et bois", 8, 2);
 
 #------------------------------------------------------------
@@ -179,6 +229,36 @@ CREATE TABLE IF NOT EXISTS episode(
         PRIMARY KEY (episode_id )
 )ENGINE=InnoDB;
 
+# DATA : episode---------------------------------------------
+INSERT INTO episode(episode_id, num, release_date, season_id)
+VALUES
+    (1, 1, "2015-02-28", 1),
+    (2, 2, "2015-02-28", 1),
+    (3, 3, "2015-02-28", 1),
+    (4, 4, "2015-01-12", 1),
+    (5, 1, "2015-02-28", 2),
+    (6, 2, "2015-06-02", 2),
+    (7, 3, "2015-02-28", 2),
+    (8, 4, "2015-02-28", 2),
+    (9, 5, "2015-02-28", 2),
+    (10, 1, "2015-02-28", 3),
+    (11, 2, "2015-02-28", 3),
+    (12, 3, "2015-02-28", 3),
+    (13, 4, "2015-02-28", 3),
+    (14, 4, "2015-09-04", 4),
+    (15, 1, "2015-02-28", 5),
+    (16, 2, "2015-02-28", 5),
+    (17, 3, "2015-02-28", 5),
+    (18, 4, "2015-02-28", 5),
+    (19, 1, "2015-02-28", 6),
+    (20, 1, "2015-02-28", 8),
+    (21, 2, "2015-02-28", 8),
+    (22, 1, "2015-12-11", 9),
+    (23, 2, "2015-02-28", 9),
+    (24, 3, "2015-02-28", 9),
+    (25, 4, "2015-02-28", 9),
+    (26, 1, "2015-12-25", 10);
+
 
 #------------------------------------------------------------
 # Table: actor
@@ -191,6 +271,14 @@ CREATE TABLE IF NOT EXISTS actor(
         PRIMARY KEY (actor_id )
 )ENGINE=InnoDB;
 
+# DATA : actor-----------------------------------------------
+INSERT INTO actor(actor_id, first_name, last_name)
+VALUES 
+    (1, "robert", "redford"),
+    (2, "angelina", "moche"),
+    (3, "fanfan", "latulipe"),
+    (4, "arturo", "vidal"),
+    (5, "Brad", "pitt");
 
 #------------------------------------------------------------
 # Table: role
@@ -202,6 +290,12 @@ CREATE TABLE IF NOT EXISTS role(
         PRIMARY KEY (role_id )
 )ENGINE=InnoDB;
 
+# DATA : role------------------------------------------------
+INSERT INTO role(role_id, name)
+VALUES 
+    (1, "utilisateur"),
+    (2, "modérateur"),
+    (3, "administrateur");
 
 #------------------------------------------------------------
 # Table: category
@@ -213,6 +307,13 @@ CREATE TABLE IF NOT EXISTS category(
         PRIMARY KEY (category_id )
 )ENGINE=InnoDB;
 
+# DATA : category--------------------------------------------
+INSERT INTO category(category_id, name)
+VALUES 
+    (1, "Fantaisy"),
+    (2, "Policier"),
+    (3, "Aventure"),
+    (4, "Comédie");
 
 #------------------------------------------------------------
 # Table: evaluation
@@ -224,6 +325,14 @@ CREATE TABLE IF NOT EXISTS evaluation(
         PRIMARY KEY (evaluation_id )
 )ENGINE=InnoDB;
 
+# DATA : evaluation------------------------------------------
+INSERT INTO evaluation(evaluation_id, score)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5);
 
 #------------------------------------------------------------
 # Table: comment
@@ -231,7 +340,7 @@ CREATE TABLE IF NOT EXISTS evaluation(
 
 CREATE TABLE IF NOT EXISTS comment(
         comment_id   int (11) Auto_increment  NOT NULL ,
-        validation   Bool NOT NULL ,
+        validation int (1) NOT NULL ,
         comment_date Date ,
         message      Text NOT NULL ,
         serie_id     Int NOT NULL ,
@@ -239,6 +348,32 @@ CREATE TABLE IF NOT EXISTS comment(
         PRIMARY KEY (comment_id )
 )ENGINE=InnoDB;
 
+# DATA : comment---------------------------------------------
+INSERT INTO comment(comment_id, validation, comment_date, 
+            message, serie_id, user_id)
+VALUES
+    (1, 1, "2015-01-15", 
+    "ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor",
+    1, 3),
+    (2, 1, "2015-01-18", 
+    "ipsum dolor sit amet, con dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor",
+    1, 5),
+    (3, 0, "2015-02-01", 
+    "ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dlabori",
+    1, 2),
+    (4, 1, "2015-03-15", 
+    "ipsuamet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dlaborea commodo
+    consequat. Duis aute irure dolor",
+    3, 6),
+    (5, 1, "2015-03-19", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor",
+    8, 5);
 
 #------------------------------------------------------------
 # Table: translation_episode
@@ -253,6 +388,126 @@ CREATE TABLE IF NOT EXISTS translation_episode(
         PRIMARY KEY (translation_episode_id )
 )ENGINE=InnoDB;
 
+# DATA : translation_episode---------------------------------
+INSERT INTO translation_episode(translation_episode_id, name,
+            synopsis, episode_id, language_id)
+VALUES
+    (1, "Accapolcos1", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    1, 1),
+    (2, "Accapolcos1", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    1, 2),
+    (3, "Accapolcos2", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    2, 1),
+    (4, "Accapolcos2", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    2, 2),
+    (5, "Accapolcos3", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    3, 1),
+    (6, "Accapolcos3", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    3, 2),
+    (7, "Accapolcos4", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    4, 1),
+    (8, "Accapolcos5", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    5, 1),
+    (9, "Accapolcos6", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    6, 1),
+    (10, "Accapolcos7", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    7, 1),
+    (11, "Accapolcos8", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    8, 1),
+    (12, "Accapolcos9", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    9, 1),
+    (13, "Accapolcos10", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    10, 1),
+    (14, "Accapolcos11", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    11, 1),
+    (15, "Accapolcos12", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    12, 1),
+    (16, "Accapolcos13", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    13, 1),
+    (17, "Accapolcos14", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    14, 1),
+    (18, "Accapolcos15", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    15, 1),
+    (19, "Accapolcos16", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    16, 1),
+    (20, "Accapolcos17", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    17, 1),
+    (21, "Accapolcos18", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    18, 1),
+    (22, "Accapolcos19", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    19, 1),
+    (23, "Accapolcos20", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    20, 1),
+    (24, "Accapolcos21", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    21, 1),
+    (25, "Accapolcos22", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    22, 1),
+    (26, "Accapolcos23", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    23, 1),
+    (27, "Accapolcos24", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    24, 1),
+    (28, "Accapolcos25", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    25, 1),
+    (29, "Accapolcos26", 
+    "incididunt ut labore et dlaboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor", 
+    26, 1);
 
 #------------------------------------------------------------
 # Table: ban_list
@@ -266,6 +521,11 @@ CREATE TABLE IF NOT EXISTS ban_list(
         PRIMARY KEY (ban_list_id )
 )ENGINE=InnoDB;
 
+# DATA : ban_list--------------------------------------------
+INSERT INTO ban_list(ban_list_id, ban_date, user_ban_id, 
+                    user_banished_id)
+VALUES
+    (1, "2015-01-26", 5, 4);
 
 #------------------------------------------------------------
 # Table: evaluate
@@ -278,6 +538,24 @@ CREATE TABLE IF NOT EXISTS evaluate(
         PRIMARY KEY (serie_id ,evaluation_id ,user_id )
 )ENGINE=InnoDB;
 
+# DATA : evaluate--------------------------------------------
+INSERT INTO evaluate(serie_id, evaluation_id, user_id)
+VALUES 
+    (1,3,1),
+    (1,4,2),
+    (1,1,3),
+    (1,5,6),
+    (2,5,1),
+    (2,4,5),
+    (3,1,2),
+    (3,2,4),
+    (3,2,6),
+    (4,5,6),
+    (5,2,3),
+    (5,5,5),
+    (6,1,5),
+    (7,3,6),
+    (7,4,6);
 
 #------------------------------------------------------------
 # Table: casting
@@ -289,6 +567,25 @@ CREATE TABLE IF NOT EXISTS casting(
         PRIMARY KEY (actor_id ,serie_id )
 )ENGINE=InnoDB;
 
+# DATA : casting---------------------------------------------
+INSERT INTO casting(actor_id, serie_id)
+VALUES
+    (1,1),
+    (3,1),
+    (2,2),
+    (4,2),
+    (5,2),
+    (2,3),
+    (3,4),
+    (1,5),
+    (2,5),
+    (3,5),
+    (5,5),
+    (5,6),
+    (3,6),
+    (4,7),
+    (1,8),
+    (2,8);
 
 #------------------------------------------------------------
 # Table: criticize
@@ -301,6 +598,24 @@ CREATE TABLE IF NOT EXISTS criticize(
         PRIMARY KEY (user_id ,comment_id )
 )ENGINE=InnoDB;
 
+# DATA : criticize-------------------------------------------
+INSERT INTO criticize(user_id, comment_id, love)
+VALUES
+    (1,1,1),
+    (2,1,1),
+    (3,2,1),
+    (4,2,1),
+    (1,2,1),
+    (2,3,1),
+    (3,3,1),
+    (4,3,1),
+    (5,3,1),
+    (1,4,1),
+    (1,5,1),
+    (2,5,1),
+    (3,5,1),
+    (4,5,1),
+    (6,5,1);
 
 #------------------------------------------------------------
 # Table: friend_list
@@ -312,6 +627,15 @@ CREATE TABLE IF NOT EXISTS friend_list(
         PRIMARY KEY (user_id ,friend_id )
 )ENGINE=InnoDB;
 
+# DATA : friend_list-----------------------------------------
+INSERT INTO friend_list(user_id, friend_id)
+VALUES 
+    (1,2),
+    (1,3),
+    (5,2),
+    (6,5),
+    (4,1),
+    (3,2);
 
 #------------------------------------------------------------
 # Table: follow
@@ -323,6 +647,25 @@ CREATE TABLE IF NOT EXISTS follow(
         PRIMARY KEY (serie_id ,user_id )
 )ENGINE=InnoDB;
 
+# DATA : follow----------------------------------------------
+INSERT INTO follow(serie_id, user_id)
+VALUES
+    (1, 2),
+    (2, 2),
+    (2, 3),
+    (2, 5),
+    (2, 6),
+    (3, 2),
+    (3, 1),
+    (3, 6),
+    (5, 4),
+    (5, 5),
+    (6, 6),
+    (7, 2),
+    (8, 2),
+    (8, 3),
+    (8, 1),
+    (1, 1);
 
 #------------------------------------------------------------
 # Table: see
@@ -334,6 +677,17 @@ CREATE TABLE IF NOT EXISTS see(
         PRIMARY KEY (user_id ,episode_id )
 )ENGINE=InnoDB;
 
+# DATA : see-------------------------------------------------
+INSERT INTO see(user_id, episode_id)
+VALUES
+    (1, 1),
+    (2, 1),
+    (3, 1),
+    (4, 1),
+    (6, 1),
+    (2, 2),
+    (1, 2),
+    (1, 3);
 
 #------------------------------------------------------------
 # Table: category_serie
@@ -344,6 +698,21 @@ CREATE TABLE IF NOT EXISTS category_serie(
         category_id Int NOT NULL ,
         PRIMARY KEY (serie_id ,category_id )
 )ENGINE=InnoDB;
+
+# DATA : category_serie--------------------------------------
+INSERT INTO category_serie(serie_id, category_id)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 1),
+    (4, 4),
+    (5, 4),
+    (6, 3),
+    (7, 2),
+    (8, 3),
+    (1, 3),
+    (6, 1),
+    (7, 1);
 
 #------------------------------------------------------------
 #---------------------::  CONSTRAINT ::----------------------
