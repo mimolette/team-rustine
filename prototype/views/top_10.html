@@ -1,0 +1,104 @@
+<!-- ==== Documentation ========================================================
+    ==>todo==> : tout les commentaires précédés de cette mention signifient que
+                 cet aspect conporte encore des zone de flou et qu'il faudra
+                 éventuellement apporter des modification avant la mise en
+                 production.
+    ::info::   : tout les commentaires précédés de cette mention sont simplement
+                 des informations diverse sur le contenu de ce qui va suivre.
+ -->
+
+<!doctype html>
+
+<!-- ==>todo==> penser à rendre le paramêtre de lang dynamique comme le site
+              prévoi aux moins deux langues possibles minimum (EN, FR)       -->
+<html lang="fr">
+  <!-- ::info:: déclaration des information d'entête de la page web -->
+  <head>
+    <!-- ::info:: choix de l'encodage des caractères -->
+    <meta charset="utf-8"/>
+    <!-- ::info:: choix du titre de la page web -->
+    <!-- ==> todo ==> envisager de changer le nom du site web -->
+    <title>Top 10 des meilleurs séries TV</title>
+    <!-- :: info :: déclaration des feuilles de style css associées -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/wireframe.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/global.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/aside_kind.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/aside_friends_list.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/footer.css"/>
+    <!-- insertion du style css de l'accueil pour les vignette de série -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/accueil.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/top_10.css"/>
+  </head>
+
+  <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
+                -->
+  <body>
+    <div class="version">
+      <span>Prototype</span>
+      <span>page du Top 10</span>
+    </div>
+
+    <!-- l'entête de la page, inclut par le script header.js -->
+    <header id="hd_js"></header>
+
+    <!-- le block <div> qui contient tout le contenu de la page -->
+    <div id="main">
+      <!-- le block <section> qui contient tout les informations de la
+           page courante -->
+      <section>
+        
+        <h1 class="wf_no-link-align">Titre principal</h1>
+
+        <!-- le block qui contient le classement dans sa totalité -->
+        <div>
+          <!-- le block <DIV> qui contient la vignette de la série -->
+            <div class="top_serie_block">
+              <!-- l'ensemble image de la serie plus nom -->
+              <figure>
+                  <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                  <figcaption>
+                      <a class="wf_link" href="#">Nom de serie</a>
+                  </figcaption>
+              </figure>
+              <!-- la parie latérale -->
+              <div class="top_serie_lat">
+                  <!-- l'évaluation de la série -->
+                  <div class="top_serie_lat_evaluation">
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                  </div>
+                  <!-- le nombre de vue -->
+                  <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+              </div>
+              <!-- l'image du classement de la série -->
+              <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+        </div>
+
+      </section>
+      <!-- la partie latérale qui contient : choix des genres, liste des
+           amis. Inclut par les scripts aside_kind.js et
+           aside_friends_list.js -->
+      <aside id="as_js"></aside>
+    </div>
+
+    <!-- ::info:: la balise <footer>, le pied de page du site -->
+    <footer class="wf_no-link-content" id="ft_js"></footer>
+
+    <!-- ::info:: Appel du script pour l'affichage du header -->
+    <script src="../javascirpts/header.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de choix des
+                  genres -->
+    <script src="../javascirpts/aside_kind.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de la liste des
+                  amis -->
+    <script src="../javascirpts/aside_friends_list.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du footer -->
+    <script src="../javascirpts/footer.js"></script>
+  </body>
+
+</html>
