@@ -26,8 +26,6 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/aside_kind.css"/>
     <link rel="stylesheet" type="text/css" href="../stylesheets/aside_friends_list.css"/>
     <link rel="stylesheet" type="text/css" href="../stylesheets/footer.css"/>
-    <!-- insertion du style css de l'accueil pour les vignette de série -->
-    <link rel="stylesheet" type="text/css" href="../stylesheets/accueil.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/top_10.css"/>
   </head>
 
@@ -46,36 +44,270 @@
     <div id="main">
       <!-- le block <section> qui contient tout les informations de la
            page courante -->
-      <section>
+      <section id="top_10">
         
+        <!-- le titre de la page -->
         <h1 class="wf_no-link-align">Titre principal</h1>
 
+        <!-- le panneau de filtre du résultat des différents top : top des meilleurs vue, top des meilleurs suivi, top des mieux noté, ... -->
+        <ul>
+          <li class="wf_link">filtre 1</li>
+          <li class="wf_link">filtre 2</li>
+          <li class="wf_link">filtre 3</li>
+          <li class="wf_link">filtre 4</li>
+        </ul>
+
         <!-- le block qui contient le classement dans sa totalité -->
-        <div>
-          <!-- le block <DIV> qui contient la vignette de la série -->
-            <div class="top_serie_block">
-              <!-- l'ensemble image de la serie plus nom -->
-              <figure>
-                  <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
-                  <figcaption>
-                      <a class="wf_link" href="#">Nom de serie</a>
-                  </figcaption>
-              </figure>
-              <!-- la parie latérale -->
-              <div class="top_serie_lat">
-                  <!-- l'évaluation de la série -->
-                  <div class="top_serie_lat_evaluation">
-                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
-                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
-                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
-                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
-                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
-                  </div>
-                  <!-- le nombre de vue -->
-                  <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+        <div class="top_10_block">
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+            <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
               </div>
-              <!-- l'image du classement de la série -->
-              <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+          </div>
+          <!-- chaque résultat est stocké dans une <div> -->
+          <div class="top_10_result">
+              <!-- l'ensemble image de la serie plus nom -->
+            <figure>
+              <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+              <figcaption>
+                <a class="wf_link" href="#">Nom de serie</a>
+              </figcaption>
+            </figure>
+            <!-- la partie larérale du résultat -->
+            <div class="top_10_lat">
+              <!-- l'évaluation de la série -->
+              <div class="top_10_lat_evaluation">
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+              </div>
+              <!-- le nombre de vue -->
+              <div class="top_10_lat_nbVu wf_no-link">Nb vu</div>
+            </div>
+            <!-- l'image du classement de la série -->
+            <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
           </div>
         </div>
 
