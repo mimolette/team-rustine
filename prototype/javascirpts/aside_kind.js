@@ -35,7 +35,7 @@ tag_div_kind.id = "as_kind";
             // la balise <a>, le lien vers ce chois de genre
             var tag_a = document.createElement("a");
             tag_a.className = "wf_link";
-            tag_a.setAttribute("href", "#");
+            tag_a.setAttribute("href", "detail_genre.html");
             // création du texte affiché
             var text = "Genre " + (i+1);
             var tag_a_text = document.createTextNode(text);
