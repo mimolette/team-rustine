@@ -162,6 +162,25 @@ header aside {
     margin-left: 10px;
 }
 
+    /* ::info:: block de type <div> qui regroupe les liens de connection 
+                et de création de compte */
+    #hd_block_connect {
+        /* ::info:: positionnement des éléments contenu dans cette balise */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* ::info:: marges internes */
+        padding: 0 2px 0 2px;
+        /* ::info:: capacité de cet éléments à prendre à s'étendre
+                    dans la place disponible */
+        flex-grow: 1;
+    }
+
+        /* ::info:: les liens dans le block de connection */
+        #hd_block_connect a {
+            margin-bottom: 5px;
+        }
+
     /* ::info:: block de type <div> qui regroupe les informations de
                 l'utilisateur, l'ensemble du block est un lien pour le
                 moment */
@@ -172,6 +191,9 @@ header aside {
         justify-content: flex-start;
         /* ::info:: marges internes */
         padding: 0 2px 0 2px;
+        /* ::info:: capacité de cet éléments à prendre à s'étendre
+                    dans la place disponible */
+        flex-grow: 1;
     }
 
         /* ::info:: balise <section> qui regroupe : pseudo et autres
@@ -214,9 +236,6 @@ header aside {
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        /* ::info:: capacité de cet éléments à prendre à s'étendre
-                    dans la place disponible */
-        flex-grow: 1;
         /* ::info:: marges internes */
         padding: 2px;
     }
