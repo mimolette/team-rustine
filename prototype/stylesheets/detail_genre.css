@@ -1,3 +1,6 @@
+/* ::info:: Cette page s'applique également aux résultat de toutes
+les séries et pas seulement d'un genre en particulier */
+
 /* ::info:: le block liste de la section qui contient 
 les filtres des résultats des top */
 #detail_genre ul {
@@ -91,3 +94,22 @@ les filtres des résultats des top */
 				max-width: 15px;
 				flex-grow: 1;
 			}
+
+/* ::info:: Le pied de page du résultat, il contient les liens vers 
+						les autres page de résultat */
+#detail_genre footer {
+	margin: 15px 0px;
+}
+
+	/* ::info:: la balise <nav> dans le footer */
+	#detail_genre footer nav {
+		display: flex;
+		justify-content: center;
+	}
+
+		/* ::info:: Chaque lien de pagination */
+		#detail_genre footer nav a {
+			padding: 0 4px;
+			min-width: 28px;
+			box-sizing: border-box;
+		}
