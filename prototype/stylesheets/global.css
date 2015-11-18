@@ -88,3 +88,16 @@
                     la place disponible */
         flex-grow: 1;
 }
+
+/* ::info:: les différents titre de type <h1> */
+h1 {
+    /* ::info:: marges externes */
+    margin: 0;
+    margin-bottom: 15px;
+    /* ::info:: marges internes */
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* ::info:: alignement du texte */
+    text-align: left;
+}

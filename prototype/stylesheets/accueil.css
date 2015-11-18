@@ -10,19 +10,6 @@
                  des informations diverse sur le contenu de ce qui va suivre.
 */
 
-/* ::info:: les différents titre de type <h2> de la page d'accueil */
-h2 {
-    /* ::info:: marges externes */
-    margin: 0;
-    margin-bottom: 15px;
-    /* ::info:: marges internes */
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    /* ::info:: alignement du texte */
-    text-align: left;
-}
-
 /* ::info:: la premiere section de l'accueil, c'est un block qui contient les
             différentes séries les plus suivies du moment */
 #accueil_top_serie {

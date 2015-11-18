@@ -80,7 +80,7 @@ tag_header.appendChild(tag_section);
                 },
                 {
                     name : "Top 10",
-                    link : "#"
+                    link : "top_10.html"
                 },
                 {
                     name : "Séries",
