@@ -1,0 +1,423 @@
+<!-- ==== Documentation ========================================================
+    ==>todo==> : tout les commentaires précédés de cette mention signifient que
+                 cet aspect conporte encore des zone de flou et qu'il faudra
+                 éventuellement apporter des modification avant la mise en
+                 production.
+    ::info::   : tout les commentaires précédés de cette mention sont simplement
+                 des informations diverse sur le contenu de ce qui va suivre.
+ -->
+
+<!doctype html>
+
+<!-- ==>todo==> penser à rendre le paramêtre de lang dynamique comme le site
+              prévoi aux moins deux langues possibles minimum (EN, FR)       -->
+<html lang="fr">
+  <!-- ::info:: déclaration des information d'entête de la page web -->
+  <head>
+    <!-- ::info:: choix de l'encodage des caractères -->
+    <meta charset="utf-8"/>
+    <!-- ::info:: choix du titre de la page web -->
+    <!-- ==> todo ==> envisager de changer le nom du site web -->
+    <title>Tv show</title>
+    <!-- :: info :: déclaration des feuilles de style css associées -->
+    <link rel="stylesheet" href="../stylesheets/wireframe.css"/>
+    <link rel="stylesheet" href="../stylesheets/global.css"/>
+    <link rel="stylesheet" href="../stylesheets/header.css"/>
+    <link rel="stylesheet" href="../stylesheets/aside_kind.css"/>
+    <link rel="stylesheet" href="../stylesheets/aside_friends_list.css"/>
+    <link rel="stylesheet" href="../stylesheets/footer.css"/>
+    <link rel="stylesheet" href="../stylesheets/accueil.css"/>
+    <link rel="stylesheet" href="../stylesheets/user_connection.css"/>
+  </head>
+
+  <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
+                -->
+  <body>
+    <div class="version">
+      <span>Prototype</span>
+      <span>page de connection</span>
+    </div>
+
+    <!-- l'entête de la page, inclut par le script header.js -->
+    <header id="hd_js"></header>
+
+    <!-- le block <div> qui contient tout le contenu de la page -->
+    <div id="main">
+      <!-- le block <section> qui contient tout les informations de la
+           page courante -->
+        <section>
+          <h1 class="wf_no-link-align">Titre principal</h1>
+
+          <!-- le block qui contient les meilleures séries suivies
+                 du moment -->
+          <div id="accueil_top_serie">
+            <!-- chaque série est matérialisée dans un block <div>
+                 de class top_serie -->
+            <div class="top_serie">
+              <!-- le block <DIV> qui contient la vignette de la série -->
+              <div class="top_serie_block">
+                <!-- l'ensemble image de la serie plus nom -->
+                <figure>
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                    <figcaption>
+                        <a class="wf_link" href="#">Nom de serie</a>
+                    </figcaption>
+                </figure>
+                <!-- la parie latérale -->
+                <div class="top_serie_lat">
+                    <!-- l'évaluation de la série -->
+                    <div class="top_serie_lat_evaluation">
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                    </div>
+                    <!-- le nombre de vue -->
+                    <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+                </div>
+                <!-- l'image du classement de la série -->
+                <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+            </div>
+            <!-- le commentaire le plus pertinant laisser par un utilisateur -->
+            <div class="top_comment_block">
+              <!-- l'avatar et le pseudo de l'auteur du commentaire -->
+              <figure>
+                <figcaption>
+                  <!-- ::info:: pseudo des amis -->
+                  <a class="wf_link" href="#">Pseudo</a>
+                  <!-- ::info:: statut des amis -->
+                  <div class="wf_no-link">Statut</div>
+                </figcaption>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+              </figure>
+              <!-- la partie qui regroupe information et le message en lui même -->
+              <div class="top_comment_message">
+                <!-- l'entête de ce block, qui regroupe la date et les likes du commentaire -->
+                <header>
+                  <div class="wf_no-link top_comment_date">
+                      Date du message
+                  </div>
+                  <div class="top_comment_like">
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="pour"/>
+                      <span class="wf_no-link">NB like</span>
+                    </div>
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="contre"/>
+                      <span class="wf_no-link">NB dislike</span>
+                    </div>
+                  </div>
+                </header>
+                <!-- le corps du message -->
+                <div class="top_comment_corps wf_no-link">
+                  Message
+                </div>
+              </div>
+            </div>                        
+          </div>  
+
+            <!-- chaque série est matérialisée dans un block <div>
+            de class top_serie -->
+            <div class="top_serie">
+              <!-- le block <DIV> qui contient la vignette de la série -->
+              <div class="top_serie_block">
+                <!-- l'ensemble image de la serie plus nom -->
+                <figure>
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                    <figcaption>
+                        <a class="wf_link" href="#">Nom de serie</a>
+                    </figcaption>
+                </figure>
+                <!-- la parie latérale -->
+                <div class="top_serie_lat">
+                    <!-- l'évaluation de la série -->
+                    <div class="top_serie_lat_evaluation">
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                    </div>
+                    <!-- le nombre de vue -->
+                    <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+                </div>
+                <!-- l'image du classement de la série -->
+                <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+            </div>
+            <!-- le commentaire le plus pertinant laisser par un utilisateur -->
+            <div class="top_comment_block">
+              <!-- l'avatar et le pseudo de l'auteur du commentaire -->
+              <figure>
+                <figcaption>
+                  <!-- ::info:: pseudo des amis -->
+                  <a class="wf_link" href="#">Pseudo</a>
+                  <!-- ::info:: statut des amis -->
+                  <div class="wf_no-link">Statut</div>
+                </figcaption>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+              </figure>
+              <!-- la partie qui regroupe information et le message en lui même -->
+              <div class="top_comment_message">
+                <!-- l'entête de ce block, qui regroupe la date et les likes du commentaire -->
+                <header>
+                  <div class="wf_no-link top_comment_date">
+                      Date du message
+                  </div>
+                  <div class="top_comment_like">
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="pour"/>
+                      <span class="wf_no-link">NB like</span>
+                    </div>
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="contre"/>
+                      <span class="wf_no-link">NB dislike</span>
+                    </div>
+                  </div>
+                </header>
+                <!-- le corps du message -->
+                <div class="top_comment_corps wf_no-link">
+                  Message
+                </div>
+              </div>
+            </div>                        
+          </div> 
+
+            <!-- chaque série est matérialisée dans un block <div>
+            de class top_serie -->
+            <div class="top_serie">
+              <!-- le block <DIV> qui contient la vignette de la série -->
+              <div class="top_serie_block">
+                <!-- l'ensemble image de la serie plus nom -->
+                <figure>
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                    <figcaption>
+                        <a class="wf_link" href="#">Nom de serie</a>
+                    </figcaption>
+                </figure>
+                <!-- la parie latérale -->
+                <div class="top_serie_lat">
+                    <!-- l'évaluation de la série -->
+                    <div class="top_serie_lat_evaluation">
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                    </div>
+                    <!-- le nombre de vue -->
+                    <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+                </div>
+                <!-- l'image du classement de la série -->
+                <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+            </div>
+            <!-- le commentaire le plus pertinant laisser par un utilisateur -->
+            <div class="top_comment_block">
+              <!-- l'avatar et le pseudo de l'auteur du commentaire -->
+              <figure>
+                <figcaption>
+                  <!-- ::info:: pseudo des amis -->
+                  <a class="wf_link" href="#">Pseudo</a>
+                  <!-- ::info:: statut des amis -->
+                  <div class="wf_no-link">Statut</div>
+                </figcaption>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+              </figure>
+              <!-- la partie qui regroupe information et le message en lui même -->
+              <div class="top_comment_message">
+                <!-- l'entête de ce block, qui regroupe la date et les likes du commentaire -->
+                <header>
+                  <div class="wf_no-link top_comment_date">
+                      Date du message
+                  </div>
+                  <div class="top_comment_like">
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="pour"/>
+                      <span class="wf_no-link">NB like</span>
+                    </div>
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="contre"/>
+                      <span class="wf_no-link">NB dislike</span>
+                    </div>
+                  </div>
+                </header>
+                <!-- le corps du message -->
+                <div class="top_comment_corps wf_no-link">
+                  Message
+                </div>
+              </div>
+            </div>                        
+          </div> 
+
+            <!-- chaque série est matérialisée dans un block <div>
+            de class top_serie -->
+            <div class="top_serie">
+              <!-- le block <DIV> qui contient la vignette de la série -->
+              <div class="top_serie_block">
+                <!-- l'ensemble image de la serie plus nom -->
+                <figure>
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                    <figcaption>
+                        <a class="wf_link" href="#">Nom de serie</a>
+                    </figcaption>
+                </figure>
+                <!-- la parie latérale -->
+                <div class="top_serie_lat">
+                    <!-- l'évaluation de la série -->
+                    <div class="top_serie_lat_evaluation">
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                    </div>
+                    <!-- le nombre de vue -->
+                    <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+                </div>
+                <!-- l'image du classement de la série -->
+                <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+            </div>
+            <!-- le commentaire le plus pertinant laisser par un utilisateur -->
+            <div class="top_comment_block">
+              <!-- l'avatar et le pseudo de l'auteur du commentaire -->
+              <figure>
+                <figcaption>
+                  <!-- ::info:: pseudo des amis -->
+                  <a class="wf_link" href="#">Pseudo</a>
+                  <!-- ::info:: statut des amis -->
+                  <div class="wf_no-link">Statut</div>
+                </figcaption>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+              </figure>
+              <!-- la partie qui regroupe information et le message en lui même -->
+              <div class="top_comment_message">
+                <!-- l'entête de ce block, qui regroupe la date et les likes du commentaire -->
+                <header>
+                  <div class="wf_no-link top_comment_date">
+                      Date du message
+                  </div>
+                  <div class="top_comment_like">
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="pour"/>
+                      <span class="wf_no-link">NB like</span>
+                    </div>
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="contre"/>
+                      <span class="wf_no-link">NB dislike</span>
+                    </div>
+                  </div>
+                </header>
+                <!-- le corps du message -->
+                <div class="top_comment_corps wf_no-link">
+                  Message
+                </div>
+              </div>
+            </div>                        
+          </div> 
+
+            <!-- chaque série est matérialisée dans un block <div>
+            de class top_serie -->
+            <div class="top_serie">
+              <!-- le block <DIV> qui contient la vignette de la série -->
+              <div class="top_serie_block">
+                <!-- l'ensemble image de la serie plus nom -->
+                <figure>
+                    <img class="wf_img" src="../pictures/wf_img.jpg" alt="serie"/>
+                    <figcaption>
+                        <a class="wf_link" href="#">Nom de serie</a>
+                    </figcaption>
+                </figure>
+                <!-- la parie latérale -->
+                <div class="top_serie_lat">
+                    <!-- l'évaluation de la série -->
+                    <div class="top_serie_lat_evaluation">
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                        <img class="wf_img" src="../pictures/wf_img.jpg" alt="evaluation"/>
+                    </div>
+                    <!-- le nombre de vue -->
+                    <div class="top_serie_lat_nbVu wf_no-link">Nb vu</div>
+                </div>
+                <!-- l'image du classement de la série -->
+                <img class="wf_img classement_serie" src="../pictures/wf_img.jpg" alt="classement_serie"/>
+            </div>
+            <!-- le commentaire le plus pertinant laisser par un utilisateur -->
+            <div class="top_comment_block">
+              <!-- l'avatar et le pseudo de l'auteur du commentaire -->
+              <figure>
+                <figcaption>
+                  <!-- ::info:: pseudo des amis -->
+                  <a class="wf_link" href="#">Pseudo</a>
+                  <!-- ::info:: statut des amis -->
+                  <div class="wf_no-link">Statut</div>
+                </figcaption>
+                <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
+              </figure>
+              <!-- la partie qui regroupe information et le message en lui même -->
+              <div class="top_comment_message">
+                <!-- l'entête de ce block, qui regroupe la date et les likes du commentaire -->
+                <header>
+                  <div class="wf_no-link top_comment_date">
+                      Date du message
+                  </div>
+                  <div class="top_comment_like">
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="pour"/>
+                      <span class="wf_no-link">NB like</span>
+                    </div>
+                    <div>
+                      <img class="wf_img" src="../pictures/wf_img.jpg" alt="contre"/>
+                      <span class="wf_no-link">NB dislike</span>
+                    </div>
+                  </div>
+                </header>
+                <!-- le corps du message -->
+                <div class="top_comment_corps wf_no-link">
+                  Message
+                </div>
+              </div>
+            </div>                        
+          </div> 
+
+
+        </div>
+      </section>
+      <!-- la partie latérale qui contient : choix des genres, liste des
+           amis. Inclut par les scripts aside_kind.js et
+           aside_friends_list.js -->
+      <aside id="as_js"></aside>
+    </div>
+
+    <!-- ::info:: la balise <footer>, le pied de page du site -->
+    <footer class="wf_no-link-content" id="ft_js"></footer>
+
+    <!-- le block <div> qui se positionne en absolu pour donner un effet
+         de filtre sur le reste de la page -->
+    <div id="user_connection">
+      <form class="wf_no-link-align">
+        <label for="pseudo">Identifiant</label>
+        <input type="text" name="pseudo" id="pseudo"/>
+        <label for="mdp">Mot de passe</label>
+        <input type="password" name="mdp" id="mdp"/>
+        <footer>
+          <a class="wf_link" href="accueil.html">Connection</a>
+          <a class="wf_link" href="accueil_connect_off.html">Annuler</a>
+        </footer>
+      </form>
+    </div>
+
+    <!-- ::info:: Appel du script pour l'affichage du header -->
+    <script src="../javascirpts/header_connect_off.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de choix des
+                  genres -->
+    <script src="../javascirpts/aside_kind.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de la liste des
+                  amis -->
+    <script src="../javascirpts/aside_friends_list.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du footer -->
+    <script src="../javascirpts/footer.js"></script>
+  </body>
+
+</html>

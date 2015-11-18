@@ -141,7 +141,7 @@ tag_header.appendChild(tag_aside);
         // le liens de connection à son compte utilisateur déja crée
         var link_connect = document.createElement("a");
         link_connect.className = "wf_link";
-        link_connect.setAttribute("href", "#");
+        link_connect.setAttribute("href", "user_connection.html");
         // création du texte affiché dans le liens
         var link_connect_text = document.createTextNode("connection");
         link_connect.appendChild(link_connect_text);
@@ -155,43 +155,6 @@ tag_header.appendChild(tag_aside);
         var link_new_user_text = document.createTextNode("inscription");
         link_new_user.appendChild(link_new_user_text);
         hd_block_connect.appendChild(link_new_user);
-
-    /*// la balise <div>, block qui contient les information sur l'utilisateur
-    var tag_div_user = document.createElement("div");
-    tag_div_user.id = "hd_block_user";
-    tag_aside.appendChild(tag_div_user);
-
-        // la balise <section> qui contient le pseudo et d'autre info sur
-        // l'utilisateur
-        var tag_div_user_info = document.createElement("section");
-        tag_div_user.appendChild(tag_div_user_info);
-
-            // la balise <a> du pseudo de l'utilisateur
-            var tag_user_pseudo = document.createElement("a");
-            tag_user_pseudo.className = "wf_link";
-            tag_user_pseudo.setAttribute("href", "#");
-            // création du texte affiché
-            var tag_user_pseudo_text = document.createTextNode("Pseudo");
-            tag_user_pseudo.appendChild(tag_user_pseudo_text);
-            tag_div_user_info.appendChild(tag_user_pseudo);
-
-            // la balise <a>, block des autres info de l'utilisateur
-            // ==>todo==> à modifier et à compléter : trop vague
-            var tag_user_other = document.createElement("a");
-            tag_user_other.className = "wf_link";
-            tag_user_other.id = "hd_block_user_info";
-            tag_user_other.setAttribute("href", "#");
-            // création du texte affiché
-            var tag_user_other_text = document.createTextNode("Gestion compte");
-            tag_user_other.appendChild(tag_user_other_text);
-            tag_div_user_info.appendChild(tag_user_other);
-
-        // la balise <img> qui représente l'avatar de l'utilisateur
-        var tag_user_img = document.createElement("img");
-        tag_user_img.className = "wf_img";
-        tag_user_img.setAttribute("src", "../pictures/wf_img.jpg");
-        tag_user_img.setAttribute("alt", "avatar");
-        tag_div_user.appendChild(tag_user_img);*/
 
     // la balise <div> block de liens vers les réseaux sociaux
     var tag_div_social = document.createElement("div");
