@@ -84,7 +84,7 @@ tag_header.appendChild(tag_section);
                 },
                 {
                     name : "Séries",
-                    link : "#"
+                    link : "liste_all_serie.html"
                 },
                 {
                     name : "Acteurs",
