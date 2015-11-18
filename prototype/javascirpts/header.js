@@ -142,6 +142,15 @@ tag_header.appendChild(tag_aside);
         var tag_div_user_info = document.createElement("section");
         tag_div_user.appendChild(tag_div_user_info);
 
+            // la balise <a> de déconnection du compte
+            var tag_user_pseudo = document.createElement("a");
+            tag_user_pseudo.className = "wf_link";
+            tag_user_pseudo.setAttribute("href", "accueil_connect_off.html");
+            // création du texte affiché
+            var tag_user_pseudo_text = document.createTextNode("Déconnexion");
+            tag_user_pseudo.appendChild(tag_user_pseudo_text);
+            tag_div_user_info.appendChild(tag_user_pseudo);
+
             // la balise <a> du pseudo de l'utilisateur
             var tag_user_pseudo = document.createElement("a");
             tag_user_pseudo.className = "wf_link";
