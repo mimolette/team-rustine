@@ -189,7 +189,7 @@
 
                 /* ::info:: la date du message */
                 .top_comment_date {
-                    flex: 1;
+                    flex-grow: 1;
                     /* ::info:: dimensions */
                     min-height: 30px;
                     /* ::info:: marges externes */
@@ -201,7 +201,6 @@
                     /* ::info:: positionnement des éléments contenu dans cette balise */
                     display: flex;
                     flex-direction: row;
-                    flex: 1;
                     justify-content: flex-end;
                 }
 
@@ -211,7 +210,6 @@
                         dans cette balise */
                         display: flex;
                         flex-direction: row;
-                        flex: 1;
                     }
 
                     /* ::info:: les images de like et dislike */
