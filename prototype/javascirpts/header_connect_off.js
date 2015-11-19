@@ -113,20 +113,24 @@ tag_header.appendChild(tag_section);
         tag_div_nav_search.appendChild(tag_div_search);
 
             // la balise <div> qui contient la barre de recherche
-            // ==>todo==> remplacer ce block div par le formulaire
-            var tag_div_search_bar = document.createElement("div");
+            var tag_div_search_bar = document.createElement("input");
             tag_div_search_bar.id = "hd_block_search_input";
             tag_div_search_bar.className = "wf_no-link";
-            var tag_div_search_bar_text = document.createTextNode("recherche");
-            tag_div_search_bar.appendChild(tag_div_search_bar_text);
+            tag_div_search_bar.setAttribute("type", "text");
+            tag_div_search_bar.setAttribute("placeholder", "recherche");
             tag_div_search.appendChild(tag_div_search_bar);
 
             // la balise <img>, icone de la barre de recherche
+            // ==>todo==> remplacer ce lien par un bouton formulaire
+            var tag_a = document.createElement("a");
+            tag_a.setAttribute("href", "listing_research_serie.html");
+            // création de l'image du lien
             var tag_div_search_img = document.createElement("img");
             tag_div_search_img.className = "wf_img";
             tag_div_search_img.setAttribute("src", "../pictures/wf_img.jpg");
             tag_div_search_img.setAttribute("alt", "recherche");
-            tag_div_search.appendChild(tag_div_search_img);
+            tag_a.appendChild(tag_div_search_img);
+            tag_div_search.appendChild(tag_a);
 
 // la balise <aside>, la partie latérale du headee
 var tag_aside = document.createElement("aside");

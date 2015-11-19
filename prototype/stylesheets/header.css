@@ -143,8 +143,14 @@ header section {
                 height: 25px;
             }
 
+            /* ::info:: le liens vers la recherche */
+            #hd_block_search a {
+                display: flex;
+                align-items: center;
+            }
+
             /* ::info:: icone de type <img> qui représente la recherche */
-            #hd_block_search img {
+            #hd_block_search a img {
                 /* ::info:: dimensions */
                 width: 25px;
                 height: 25px;
