@@ -88,7 +88,7 @@ tag_header.appendChild(tag_section);
                 },
                 {
                     name : "Acteurs",
-                    link : "#"
+                    link : "liste_all_actor.html"
                 },
                 {
                     name : "Calendrier diffusion",
