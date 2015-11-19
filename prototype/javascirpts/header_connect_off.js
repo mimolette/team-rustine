@@ -84,11 +84,11 @@ tag_header.appendChild(tag_section);
                 },
                 {
                     name : "Séries",
-                    link : "#"
+                    link : "liste_all_serie.html"
                 },
                 {
                     name : "Acteurs",
-                    link : "#"
+                    link : "liste_all_actor.html"
                 },
                 {
                     name : "Calendrier diffusion",
@@ -150,7 +150,7 @@ tag_header.appendChild(tag_aside);
         // le liens de creation d'un nouveau compte
         var link_new_user = document.createElement("a");
         link_new_user.className = "wf_link";
-        link_new_user.setAttribute("href", "#");
+        link_new_user.setAttribute("href", "user_registration.html");
         // création du texte affiché dans le liens
         var link_new_user_text = document.createTextNode("inscription");
         link_new_user.appendChild(link_new_user_text);

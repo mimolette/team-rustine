@@ -1,0 +1,38 @@
+
+/* ::info:: le formulaire dans sa globalité */
+#user_regis form {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 100px 30px 100px;
+}
+
+	/* ::info:: Chaque input du formualire */
+	#user_regis form input {
+		margin-bottom: 10px;
+		width: 50%;
+		box-sizing: border-box;
+		padding-right: 10px;
+	}
+
+	/* ::info:: Chaque label du formualire */
+	#user_regis form label {
+		margin-bottom: 3px;
+		width: 50%;
+		box-sizing: border-box;
+		padding-right: 10px;
+	}
+
+	/* ::info:: le pied de page du formulaire qui contient les bouton de 
+							validation et annulation */
+	#user_regis form footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+
+		/* ::info:: les boutons du pied de formulaire */
+		#user_regis form footer a {
+			width: 40%;
+			margin: 0;
+		}

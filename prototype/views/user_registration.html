@@ -1,0 +1,111 @@
+<!-- ==== Documentation ========================================================
+    ==>todo==> : tout les commentaires précédés de cette mention signifient que
+                 cet aspect conporte encore des zone de flou et qu'il faudra
+                 éventuellement apporter des modification avant la mise en
+                 production.
+    ::info::   : tout les commentaires précédés de cette mention sont simplement
+                 des informations diverse sur le contenu de ce qui va suivre.
+ -->
+
+<!doctype html>
+
+<!-- ==>todo==> penser à rendre le paramêtre de lang dynamique comme le site
+              prévoi aux moins deux langues possibles minimum (EN, FR)       -->
+<html lang="fr">
+  <!-- ::info:: déclaration des information d'entête de la page web -->
+  <head>
+    <!-- ::info:: choix de l'encodage des caractères -->
+    <meta charset="utf-8"/>
+    <!-- ::info:: choix du titre de la page web -->
+    <!-- ==> todo ==> envisager de changer le nom du site web -->
+    <title>Tv show</title>
+    <!-- :: info :: déclaration des feuilles de style css associées -->
+    <link rel="stylesheet" href="../stylesheets/wireframe.css"/>
+    <link rel="stylesheet" href="../stylesheets/global.css"/>
+    <link rel="stylesheet" href="../stylesheets/header.css"/>
+    <link rel="stylesheet" href="../stylesheets/aside_kind.css"/>
+    <link rel="stylesheet" href="../stylesheets/aside_friends_list.css"/>
+    <link rel="stylesheet" href="../stylesheets/footer.css"/>
+    <link rel="stylesheet" href="../stylesheets/user_registration.css"/>
+  </head>
+
+  <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
+                -->
+  <body>
+    <div class="version">
+      <span>Prototype</span>
+      <span>page d'inscription d'un utilisateur</span>
+    </div>
+
+    <!-- l'entête de la page, inclut par le script header.js -->
+    <header id="hd_js"></header>
+
+    <!-- le block <div> qui contient tout le contenu de la page -->
+    <div id="main">
+      <!-- le block <section> qui contient tout les informations de la
+           page courante -->
+      <section id="user_regis">
+        
+        <!-- le titre de la page -->
+        <h1 class="wf_no-link-align">Création d'un compte</h1>
+
+        <!-- le formulaire d'inscription -->
+        <form class="wf_no-link-align">
+
+          <!-- le prénom de l'utilisateur -->
+          <label for="userLastName">Prénom</label>
+          <input type="text" name="userLastName" id="userLastName"/>
+
+          <!-- le nom de l'utilisateur -->
+          <label for="userFirstName">Nom</label>
+          <input type="text" name="userFirstName" id="userFirstName"/>
+
+          <!-- le pseudo de l'utilisateur -->
+          <label for="userPseudo">Pseudo</label>
+          <input type="text" name="userPseudo" id="userPseudo"/>
+
+          <!-- la date de naissance de l'utilisateur -->
+          <label for="userDayOfBirth">Date de naissance</label>
+          <input type="date" name="userDayOfBirth" id="userDayOfBirth"/>
+
+          <!-- le mail de l'utilisateur -->
+          <label for="userMail">Email</label>
+          <input type="text" name="userMail" id="userMail"/>
+
+          <!-- le mot de passe de l'utilisateur -->
+          <label for="userMdp">Mot de passe</label>
+          <input type="password" name="userMdp" id="userMdp"/>
+
+          <!-- confirmation de mot de passe de l'utilisateur -->
+          <label for="userMdpConfirm">Mot de passe (confirmation)</label>
+          <input type="password" name="userMdpConfirm" id="userMdpConfirm"/>
+
+          <footer>
+            <a class="wf_link" href="accueil.html">Valider</a>
+            <a class="wf_link" href="accueil_connect_off.html">Annuler</a>
+          </footer>
+        </form>
+
+      </section>
+      <!-- la partie latérale qui contient : choix des genres, liste des
+           amis. Inclut par les scripts aside_kind.js et
+           aside_friends_list.js -->
+      <aside id="as_js"></aside>
+    </div>
+
+    <!-- ::info:: la balise <footer>, le pied de page du site -->
+    <footer class="wf_no-link-content" id="ft_js"></footer>
+
+    <!-- ::info:: Appel du script pour l'affichage du header -->
+    <script src="../javascirpts/header_connect_off.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de choix des
+                  genres -->
+    <script src="../javascirpts/aside_kind.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du block de la liste des
+                  amis -->
+    <script src="../javascirpts/aside_friends_list.js"></script>
+    <!-- ::info:: Appel du script pour l'affichage du footer -->
+    <script src="../javascirpts/footer.js"></script>
+  </body>
+
+</html>
