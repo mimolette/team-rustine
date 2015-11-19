@@ -27,6 +27,7 @@
     background-color: white;
     max-width: 100px;
     text-align: center;
+    z-index: 100;
 }
 
     /* ::info:: le titre du block, le premier <span> "prototype" */

@@ -26,7 +26,9 @@
     <link rel="stylesheet" href="../stylesheets/aside_kind.css"/>
     <link rel="stylesheet" href="../stylesheets/aside_friends_list.css"/>
     <link rel="stylesheet" href="../stylesheets/footer.css"/>
+    <link rel="stylesheet" href="../stylesheets/accueil.css"/>
     <link rel="stylesheet" href="../stylesheets/user_registration.css"/>
+    <link rel="stylesheet" href="../stylesheets/user_avatar_update.css"/>
   </head>
 
   <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
@@ -34,7 +36,7 @@
   <body>
     <div class="version">
       <span>Prototype</span>
-      <span>page de gestion de compte d'un utilisateur</span>
+      <span>page de modification de l'avatar de l'utilisateur</span>
     </div>
 
     <!-- l'entête de la page, inclut par le script header.js -->
@@ -55,7 +57,7 @@
           <figure>
             <img class="wf_img" src="../pictures/wf_img.jpg" alt="avatar"/>
             <figcaption>
-              <a href="user_avatar_update.html" class="wf_link">Changez votre avatar</a>
+              <a href="#" class="wf_link">Changez votre avatar</a>
             </figcaption>
           </figure>
 
@@ -84,7 +86,7 @@
           <input type="text" name="userMail" id="userMail" 
                  value="email de l'utilisateur"/>
 
-          <a id="update_mdp" class="wf_link" href="user_mdp_update.html">Modifier votre mot de passe</a>
+          <a id="update_mdp" class="wf_link" href="accueil.html">Modifier votre mot de passe</a>
 
           <footer>
             <a class="wf_link" href="accueil.html">Enregistrer</a>
@@ -102,8 +104,23 @@
     <!-- ::info:: la balise <footer>, le pied de page du site -->
     <footer class="wf_no-link-content" id="ft_js"></footer>
 
+    <!-- le block <div> qui se positionne en absolu pour donner un effet
+         de filtre sur le reste de la page -->
+    <div id="user_avatar_update">
+      <form class="wf_no-link-align">
+        <!-- le mot de passe de l'utilisateur -->
+        <label for="userAvatar">Choisir un fichier</label>
+        <input type="file" name="userAvatar" id="userAvatar"/>
+
+        <footer>
+          <a class="wf_link" href="user_manage_account.html">Enregistrer</a>
+          <a class="wf_link" href="user_manage_account.html">Annuler</a>
+        </footer>
+      </form>
+    </div>
+
     <!-- ::info:: Appel du script pour l'affichage du header -->
-    <script src="../javascirpts/header.js"></script>
+    <script src="../javascirpts/header_connect_off.js"></script>
     <!-- ::info:: Appel du script pour l'affichage du block de choix des
                   genres -->
     <script src="../javascirpts/aside_kind.js"></script>
