@@ -1,7 +1,7 @@
 
 /* ::info:: le filtre en absolu qui donne un effet d'opacité sur le reste 
 de la page */
-#user_connection {
+#user_mdp_update {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -14,9 +14,9 @@ de la page */
 }
 
 	/* ::info:: le formulaire de connection dans son ensemble */
-	#user_connection form {
-		width: 300px;
-		height: 200px;
+	#user_mdp_update form {
+		width: 400px;
+		height: 220px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -26,7 +26,7 @@ de la page */
 	}
 
 		/* ::info:: Chaque input du formualire */
-		#user_connection form input {
+		#user_mdp_update form input {
 			margin-bottom: 10px;
 			width: 100%;
 			box-sizing: border-box;
@@ -34,7 +34,7 @@ de la page */
 		}
 
 		/* ::info:: Chaque label du formualire */
-		#user_connection form label {
+		#user_mdp_update form label {
 			margin-bottom: 3px;
 			width: 100%;
 			box-sizing: border-box;
@@ -43,7 +43,7 @@ de la page */
 
 		/* ::info:: le footer du block de connection, qui contient les deux
 								boutons de validation et d'annulation */
-		#user_connection footer {
+		#user_mdp_update footer {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -51,7 +51,7 @@ de la page */
 		}
 
 			/* ::info:: les liens du footer du formulaire */
-			#user_connection footer a {
+			#user_mdp_update footer a {
 				margin: 0;
 				width: 45%;
 			}
