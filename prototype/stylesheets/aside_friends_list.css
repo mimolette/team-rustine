@@ -21,6 +21,7 @@
     max-width: 180px;
     /* ::info:: marges externes */
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
     /* ::info:: la balise <h3> du block, c'est le titre de cette section */

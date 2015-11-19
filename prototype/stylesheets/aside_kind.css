@@ -19,6 +19,7 @@
                 en colonnes */
     min-width: 180px;
     max-width: 180px;
+    box-sizing: border-box;
 }
 
     /* ::info:: la balise <h3> du block, c'est le titre de cette section */
