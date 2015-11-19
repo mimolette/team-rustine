@@ -169,7 +169,7 @@ tag_header.appendChild(tag_aside);
             var tag_user_other = document.createElement("a");
             tag_user_other.className = "wf_link";
             tag_user_other.id = "hd_block_user_info";
-            tag_user_other.setAttribute("href", "#");
+            tag_user_other.setAttribute("href", "user_manage_account.html");
             // création du texte affiché
             var tag_user_other_text = document.createTextNode("Gestion compte");
             tag_user_other.appendChild(tag_user_other_text);
