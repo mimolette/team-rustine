@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../stylesheets/aside_kind.css"/>
     <link rel="stylesheet" href="../stylesheets/aside_friends_list.css"/>
     <link rel="stylesheet" href="../stylesheets/footer.css"/>
-    <link rel="stylesheet" href="../stylesheets/###.css"/>
+    <link rel="stylesheet" href="../stylesheets/page_add_series.css"/>
   </head>
 
   <!-- ::info:: Corps de la page web, éléments visible dans le navigateur
@@ -34,7 +34,7 @@
   <body>
     <div class="version">
       <span>Prototype</span>
-      <span>page_type</span>
+      <span>page_add_series</span>
     </div>
 
     <!-- l'entête de la page, inclut par le script header.js -->
@@ -45,7 +45,37 @@
       <!-- le block <section> qui contient tout les informations de la
            page courante -->
       <section>
-        
+        <form class="wf_no-link-align">
+
+          <!-- le nom de la série -->
+          <label for="serieName">nom de la série</label>
+          <input type="text" name="SerieName" id="userLastName"/>
+
+          <!-- le nombre de saisons -->
+          <label for="numberOfSeason">nombre de saisons</label>
+          <input type="text" name="userFirstName" id="userFirstName"/>
+
+          <!-- la ou les catégories de la série -->
+          <label for="userDayOfBirth">catégories</label>
+          <input type="checkbox" name="serieCategories" id="serieCategories"/>
+
+          <!-- les acteurs de la série -->
+          <label for="userMail">acteurs</label>
+          <input type="text" name="serieActors" id="serieActors"/>
+
+          <!-- le role des acteurs de la série -->
+          <label for="userMdp">roles</label>
+          <input type="password" name="actorRoles" id="actorRoles"/>
+
+          <!-- Date de sortie de la série -->
+          <label for="userMdpConfirm">date de sortie</label>
+          <input type="date" name="releaseDate" id="realeaseDate"/>
+
+          <footer>
+            <a class="wf_link" href="accueil.html">Valider</a>
+            <a class="wf_link" href="accueil_connect_off.html">Annuler</a>
+          </footer>
+        </form>
         <!-- 
         ==============================================================
         1) Dupliquer ce fichier page_type puis renommer le !!!
